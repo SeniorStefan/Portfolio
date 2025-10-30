@@ -1,0 +1,198 @@
+/* === Базовые стили === */
+:root {
+  --bg: #0d1117;
+  --card: #161b22;
+  --text: #e6edf3;
+  --accent: #58a6ff;
+  --muted: #8b949e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.container {
+  width: min(90%, 1100px);
+  margin: 0 auto;
+  padding: 3rem 0;
+}
+
+/* === Header === */
+header {
+  text-align: center;
+  border-bottom: 1px solid #21262d;
+  padding-top: 2rem;
+}
+
+header h1 {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  margin-bottom: 0.5rem;
+  color: var(--accent);
+}
+
+header .subtitle {
+  font-size: 1.2rem;
+  color: var(--muted);
+}
+
+header .intro {
+  max-width: 650px;
+  margin: 1rem auto;
+}
+
+header .socials a {
+  color: var(--accent);
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: 500;
+}
+
+/* === About === */
+.about h2, .skills h2, .projects h2 {
+  font-size: 1.8rem;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+}
+
+/* === Skills Grid === */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+@media (min-width: 900px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.skill-card {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.skill-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skill-card li {
+  padding-left: 0;
+  margin: 0.4rem 0;
+}
+
+.skill-card:hover {
+  transform: scale(1.04);
+  box-shadow: 0 0 20px rgba(88,166,255,0.2);
+}
+
+/* === Projects === */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-card {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 25px rgba(88,166,255,0.2);
+}
+
+.stack {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  display: block;
+}
+
+/* === Footer === */
+footer {
+  text-align: center;
+  border-top: 1px solid #21262d;
+  padding: 2rem 1rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* === Анимации === */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === Центрирование контента для About и Projects === */
+.about, .projects, .skills{
+  text-align: center;
+}
+
+.about p {
+  max-width: 750px;
+  margin: 1rem auto;
+  font-size: clamp(1rem, 1.1vw + 0.9rem, 1.2rem);
+  line-height: 1.75;
+  color: #d3dbe3;
+}
+.projects h2 {
+  margin-bottom: 2rem;
+}
+
+.project-grid {
+  justify-items: center;
+}
+
+.project-card {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* === Декоративные линии под заголовками === */
+.about h2::after,
+.projects h2::after,
+.skills h2::after {
+  content: "";
+  display: block;
+  width: 160px;
+  height: 2px;
+  margin: 0.6rem auto 1.8rem;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--accent),
+    transparent
+  );
+  border-radius: 2px;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.about h2:hover::after,
+.projects h2:hover::after,
+.skills h2:hover::after {
+  opacity: 1;
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Snr_Stefan | Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="container fade-up">
+    <h1>Snr_Stefan (Доржи Гомбожапов)</h1>
+    <p class="subtitle">Senior Software & Web Developer</p>
+    <p class="intro">
+      Основной стек — <strong>C#, .NET, ASP.NET, WPF</strong>,
+      а также <strong>PHP, JS, CSS</strong>. Создаю надёжные серверные решения и современные сайты.
+    </p>
+    <div class="socials">
+      <a href="#">GitHub</a>
+      <a href="#">Telegram</a>
+      <a href="mailto:dorzhi.dev@mail.com">Email</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="about container fade-up">
+      <h2>Обо мне</h2>
+      <p>
+        Я инженер-программист с более чем девятилетним опытом разработки программных решений.
+        Основной стек — <strong>C# / .NET / ASP.NET / WPF</strong>. Разрабатываю надёжные приложения с фокусом на
+        производительность, структурированную архитектуру и удобство сопровождения.
+      </p>
+      <p>
+        Опыт включает проектирование серверных систем, оптимизацию баз данных, а также разработку UI/UX
+        интерфейсов для настольных и веб-приложений. Уверенно работаю с инфраструктурой, сетевой безопасностью и DevOps-инструментами.
+      </p>
+      <p>
+        Ценю чистый код, прозрачные процессы и технологическую целесообразность решений.
+        Всегда нацелен на результат и долгосрочную ценность продукта.
+      </p>
+    </section>
+
+    <section class="skills container fade-up">
+      <h2>Навыки</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>Backend</h3>
+          <ul>
+            <li>C#, .NET, ASP.NET</li>
+            <li>WPF (Desktop UI)</li>
+            <li>PHP (Server Logic)</li>
+            <li>Client-Server Applications</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h3>Frontend</h3>
+          <ul>
+            <li>HTML, CSS, JavaScript</li>
+            <li>Adaptive & Responsive Design</li>
+            <li>UI/UX Fundamentals</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h3>Databases</h3>
+          <ul>
+            <li>MS SQL Server, MySQL</li>
+            <li>Optimization & Indexing</li>
+            <li>Data Modeling</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h3>DevOps</h3>
+          <ul>
+            <li>Linux / Windows Server</li>
+            <li>VPN Setup & Maintenance</li>
+            <li>CI/CD, Network Config</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects container fade-up">
+      <h2>Проекты</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <h3>Project Manager App</h3>
+          <p>Клиент-серверное приложение для управления проектами и задачами.</p>
+          <span class="stack">C#, WPF, ASP.NET, MS SQL</span>
+        </div>
+
+        <div class="project-card">
+          <h3>Personal VPN Server</h3>
+          <p>Собственный VPN-сервер для безопасного доступа и тестирования сетевых решений.</p>
+          <span class="stack">Linux, WireGuard</span>
+        </div>
+
+        <div class="project-card">
+          <h3>Minecraft Server Infrastructure</h3>
+          <p>Игровой сервер с плагинами, базой данных и системой авторизации.</p>
+          <span class="stack">Java, MySQL, PHP</span>
+        </div>
+
+        <div class="project-card">
+          <h3>Portfolio Website</h3>
+          <p>Современный сайт-портфолио с адаптивным дизайном.</p>
+          <span class="stack">HTML, CSS, JS</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="fade-up">
+    <p>© 2025 Snr_Stefan | Developer Portfolio</p>
+    <p>📧 <a href="mailto:tech.by.snr.stefan.official@gmail.com">tech.by.snr.stefan.official@gmail.com</a></p>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
