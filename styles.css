@@ -196,3 +196,19 @@ footer {
 .skills h2:hover::after {
   opacity: 1;
 }
+
+.project-link {
+  display: inline-block;
+  margin-top: 0.6rem;
+  color: var(--text);      
+  font-size: 0.95rem;
+  text-decoration: none;
+  opacity: 0.85;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.project-link:hover {
+  color: var(--accent);     
+  opacity: 1;
+  text-decoration: underline;
+}
